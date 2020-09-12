@@ -1,36 +1,28 @@
+
 #include<stdio.h>
-#include<string.h>
 void reverse(char arr[])
 {
     {
-    int i=0 , j=0 , temp;
+        int i=0, j=0, temp;
+        j = strlen(arr) - 1;
 
-   j = strlen(arr) - 1;
-
-   while (i < j)
-    {
-      temp = arr[i];
-      arr[i] = arr[j];
-      arr[j] = temp;
-      i++;
-      j--;
+        while (i < j)
+        {
+            temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            i++;
+            j--;
+        }
+        printf("Reverse order: %s\n", arr);
     }
-
-    printf("\nReverse string is: %s\n", arr);
-
- }
-
 }
 
-int main()
+void main()
 {
-   char str[100];
-
-   printf("Enter the string: ");
-   gets(str);
-
-   reverse(str);
-
-   return 0;
+    char str[100];
+    printf("Enter string: ");
+    gets(str);
+    reverse(str);
 }
 
